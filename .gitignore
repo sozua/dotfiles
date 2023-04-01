@@ -8,3 +8,4 @@
 !.xserverrc
 !.config/i3
 !.config/alacritty
+!.config/systemd/user/ssh-agent.service
