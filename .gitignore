@@ -6,6 +6,11 @@
 !.zshrc
 !.xinitrc
 !.xserverrc
-!.config/i3
-!.config/alacritty
+!.config/
+!.config/i3/
+!.config/i3/config
+!.config/alacritty/
+!.config/alacritty/alacritty.yml
+!.config/systemd/
+!.config/systemd/user/
 !.config/systemd/user/ssh-agent.service
