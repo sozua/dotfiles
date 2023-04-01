@@ -1,0 +1,10 @@
+*
+!README.md
+!LICENSE
+!.gitignore
+!.zprofile
+!.zshrc
+!.xinitrc
+!.xserverrc
+!.config/i3
+!.config/alacritty
