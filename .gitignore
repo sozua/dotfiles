@@ -14,3 +14,5 @@
 !.config/systemd/
 !.config/systemd/user/
 !.config/systemd/user/ssh-agent.service
+!.config/polybar
+!.config/polybar/config
