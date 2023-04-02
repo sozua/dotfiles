@@ -56,6 +56,8 @@ fi
 
 exec i3
 
+# Start redshift
+exec redshift -l -9.39135:-40.54795 -m randr
 # session=${1:-i3}
 
 # case $session in
