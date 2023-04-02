@@ -16,3 +16,5 @@
 !.config/systemd/user/ssh-agent.service
 !.config/polybar
 !.config/polybar/config
+!.config/neofetch/
+!.config/neofetch/config.conf
