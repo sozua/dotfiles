@@ -58,12 +58,13 @@ exec i3
 
 # Start redshift
 exec redshift -l -9.39135:-40.54795 -m randr
-# session=${1:-i3}
 
-# case $session in
-#	i3|i3wm     ) exec i3;;
-#	xfce|xfce4  ) exec startxfce4;;
-#
-#	exec $1;
-# esac
+# see https://unix.stackexchange.com/a/295652/332452
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
+# see https://wiki.archlinux.org/title/GNOME/Keyring#xinitrc
+eval $(/usr/bin/gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
+
+# see https://github.com/NixOS/nixpkgs/issues/14966#issuecomment-520083836
+mkdir -p "$HOME"/.local/share/keyrings
