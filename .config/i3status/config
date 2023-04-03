@@ -7,10 +7,16 @@ general {
 
 order += "disk /home"
 order += "volume master"
+order += "cpu_usage"
 order += "wireless wlan0"
 order += "tztime local"
 
 disk "/home" { format = "%used / %total" }
+
+cpu_usage {
+	format = "CPU %usage"
+	max_threshold = 75
+}
 
 volume master {
         format = "VOL: %volume"
@@ -26,5 +32,5 @@ wireless wlan0 {
 }
 
 tztime local {
-	format = "%d/%m/%T %H:%M:%S"
+	format = "%d/%m/%Y %H:%M:%S"
 }
