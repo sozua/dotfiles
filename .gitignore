@@ -20,3 +20,5 @@
 !.config/polybar/config
 !.config/neofetch/
 !.config/neofetch/config.conf
+!.config/antigen/
+!.config/antigen/antigen.zsh
