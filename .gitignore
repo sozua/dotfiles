@@ -22,3 +22,6 @@
 !.config/neofetch/config.conf
 !.config/antigen/
 !.config/antigen/antigen.zsh
+!.config/systemd
+!.config/systemd/user
+!.config/systemd/user/solaar.service

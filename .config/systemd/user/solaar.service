@@ -1,0 +1,8 @@
+[Unit]
+Description=Logitech devices managment
+
+[Service]
+ExecStart=/usr/bin/solaar --window=hide
+
+[Install]
+WantedBy=default.target
