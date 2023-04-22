@@ -127,6 +127,8 @@ function cd() {
 # Antigen setup
 source "$HOME/.config/antigen/antigen.zsh"
 
+source "/var/lib/flatpak/exports/bin"
+
 antigen use oh-my-zsh
 
 antigen bundle git
@@ -139,3 +141,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen theme robbyrussell
 
 antigen apply
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
