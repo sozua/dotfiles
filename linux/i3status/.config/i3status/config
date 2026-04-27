@@ -1,0 +1,66 @@
+# i3status configuration file
+# See "man i3status" for documentation.
+
+general {
+    colors = true
+    color_good = "#50fa7b"
+    color_degraded = "#f1fa8c"
+    color_bad = "#ff5555"
+    interval = 2
+}
+
+order += "volume master"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "disk /"
+order += "cpu_usage"
+order += "memory"
+order += "tztime local"
+
+volume master {
+    format = "VOL: %volume"
+    format_muted = "VOL: MUTED"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+wireless _first_ {
+    format_up = "WIFI: %essid (%quality)"
+    format_down = "WIFI: disconnected"
+}
+
+ethernet _first_ {
+    format_up = "ETH: %ip"
+    format_down = ""
+}
+
+battery all {
+    format = "BAT: %status %percentage (%remaining)"
+    format_down = ""
+    status_chr = "CHR"
+    status_bat = ""
+    status_unk = "?"
+    status_full = "FULL"
+    low_threshold = 20
+    threshold_type = percentage
+}
+
+disk "/" {
+    format = "DISK: %avail free"
+}
+
+cpu_usage {
+    format = "CPU: %usage"
+}
+
+memory {
+    format = "RAM: %used / %total"
+    threshold_degraded = "1G"
+    format_degraded = "RAM: LOW %available"
+}
+
+tztime local {
+    format = "%a %b %d  %H:%M"
+}

@@ -1,0 +1,30 @@
+# Local-only secrets (never commit)
+**/secrets.fish
+**/secrets.sh
+**/.bashrc.local
+**/.profile.local
+.env
+.env.*
+
+# Machine-local fish state
+**/fish_variables
+
+# Backups & temp
+**/*.bak
+**/*.bak.*
+**/*~
+**/*.tmp
+**/config.fish.backup
+
+# Editor / OS junk
+.DS_Store
+**/.DS_Store
+.idea/
+.vscode/
+
+# Nested .claude dirs that may live inside the configs themselves
+.claude/
+**/.claude/
+
+# Don't commit lock-style state we don't want pinned across machines
+# (lazy-lock.json is intentionally tracked — pin nvim plugin versions)
