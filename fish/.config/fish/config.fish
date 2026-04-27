@@ -10,11 +10,6 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 
-# Local secrets (gitignored)
-if test -f $HOME/.config/fish/secrets.fish
-    source $HOME/.config/fish/secrets.fish
-end
-
 # Android SDK
 set --export ANDROID_HOME "$HOME/Android"
 set --export PATH $ANDROID_HOME/cmdline-tools/latest/bin $ANDROID_HOME/platform-tools $ANDROID_HOME/build-tools/35.0.0 $PATH

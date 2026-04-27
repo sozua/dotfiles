@@ -27,22 +27,6 @@ cd ~/dotfiles
 
 The script installs `stow` if missing (Homebrew on macOS, apt/dnf/pacman on Linux), then symlinks each package into `$HOME`. On macOS the `linux/` packages are skipped automatically. Re-running is safe.
 
-## Secrets
-
-Nothing in this repo holds credentials. Local-only files, sourced from the tracked configs but excluded by `.gitignore`:
-
-- `~/.config/fish/secrets.fish` — sourced from `config.fish`
-- `~/.bashrc.local` — sourced from `.bashrc`
-
-Example `~/.config/fish/secrets.fish`:
-
-```fish
-set --export JIRA_API_TOKEN "..."
-set --export OPENAI_API_KEY "..."
-```
-
-Make these `chmod 600` on a fresh machine.
-
 ## Manual deps to install on a new machine
 
 - `neovim` (>= 0.10), `fish`, `tmux`, `lazygit`, `ghostty`

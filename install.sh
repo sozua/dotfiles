@@ -58,6 +58,4 @@ else
 fi
 
 echo
-echo "Done. If this is a fresh machine, set up your local secrets:"
-echo "  ~/.config/fish/secrets.fish    (export Jira/etc. tokens for fish)"
-echo "  ~/.bashrc.local                (export OpenAI/etc. for bash)"
+echo "Done."

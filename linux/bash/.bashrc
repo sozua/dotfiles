@@ -116,6 +116,3 @@ if ! shopt -oq posix; then
 fi
 export PATH=$PATH:/usr/local/go/bin
 . "$HOME/.cargo/env"
-
-# Local secrets / machine overrides (gitignored)
-[ -f "$HOME/.bashrc.local" ] && . "$HOME/.bashrc.local"
