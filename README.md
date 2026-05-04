@@ -7,15 +7,12 @@ Personal config managed with [GNU Stow](https://www.gnu.org/software/stow/). Lin
 | Package    | Target                       | Notes                                |
 |------------|------------------------------|--------------------------------------|
 | `nvim/`    | `~/.config/nvim`             | Lazy.nvim + custom Lua modules       |
-| `fish/`    | `~/.config/fish`             | `config.fish`, `tm-*` tmux helpers   |
 | `ghostty/` | `~/.config/ghostty`          | Victor Mono, ligatures, no titlebar  |
 | `lazygit/` | `~/.config/lazygit`          |                                      |
-| `git/`     | `~/.gitconfig`               | gh credential helper                 |
 | `tmux/`    | `~/.tmux.conf`               |                                      |
 | `linux/i3/`        | `~/.config/i3`         | Linux-only                           |
 | `linux/picom/`     | `~/.config/picom`      | Linux-only                           |
 | `linux/i3status/`  | `~/.config/i3status`   | Linux-only                           |
-| `linux/bash/`      | `~/.bashrc`            | Linux-only                           |
 
 ## Install
 
@@ -29,9 +26,8 @@ The script installs `stow` if missing (Homebrew on macOS, apt/dnf/pacman on Linu
 
 ## Manual deps to install on a new machine
 
-- `neovim` (>= 0.10), `fish`, `tmux`, `lazygit`, `ghostty`
+- `neovim` (>= 0.10), `tmux`, `lazygit`, `ghostty`
 - Font: **Victor Mono** (https://rubjo.github.io/victor-mono/)
-- `pyenv`, `zoxide`, `bun`, `fnm` — referenced by `fish/conf.d/` and `config.fish`. Each is guarded with an existence check, so missing tools won't break the shell.
 - macOS: install via Homebrew. Linux: distro package manager.
 
 ## Updating
@@ -47,6 +43,6 @@ git add -A && git commit -m "tweak nvim keymap" && git push
 
 ```sh
 cd ~/dotfiles
-stow -D -t "$HOME" nvim fish ghostty lazygit git tmux
-# Linux: also `stow -D -d linux -t "$HOME" i3 picom i3status bash`
+stow -D -t "$HOME" nvim ghostty lazygit tmux
+# Linux: also `stow -D -d linux -t "$HOME" i3 picom i3status`
 ```
