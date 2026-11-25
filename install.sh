@@ -7,7 +7,7 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$REPO_DIR"
 
 CROSS_PLATFORM=(nvim ghostty lazygit tmux)
-LINUX_ONLY=(i3 picom i3status)
+LINUX_ONLY=(i3 picom i3status xcompose)
 
 ensure_stow() {
   if command -v stow >/dev/null 2>&1; then return; fi
@@ -54,7 +54,7 @@ if [ "$(uname -s)" = "Linux" ]; then
   stow_packages "$HOME" "$REPO_DIR/linux" "${LINUX_ONLY[@]}"
 else
   echo
-  echo "Skipping Linux-only packages (i3, picom, i3status) on $(uname -s)."
+  echo "Skipping Linux-only packages (i3, picom, i3status, xcompose) on $(uname -s)."
 fi
 
 echo

@@ -1,0 +1,6 @@
+# Keep the locale's default compose sequences, then override the few we care about.
+include "%L"
+
+# US alt-intl: ' + c types ç instead of ć
+<dead_acute> <c> : "ç" ccedilla
+<dead_acute> <C> : "Ç" Ccedilla
